@@ -1,0 +1,9 @@
+import csv
+
+data_list =[] #tom lista där datan hamnar från CSV
+
+with open("lag.csv","r") as file:
+    csv_reader = csv.reader(file, delimiter =';') #läser filen, delimiter tar ; för det kommer emellan annars. 
+    
+    for rad in csv_reader: #lägger in data från CSV till tomma listan
+        data_list.append(rad)
