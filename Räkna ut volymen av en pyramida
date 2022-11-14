@@ -1,0 +1,12 @@
+import math
+basarea = 10
+Höjd = 5
+
+
+
+def volymPyramid(B,h):
+    volym = (B*h)/3
+    return volym
+    
+resultat_1 = volymPyramid(basarea,Höjd)   
+print(round(resultat,1))
