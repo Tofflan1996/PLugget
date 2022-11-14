@@ -1,0 +1,20 @@
+# slumolista 1-10
+
+import random
+
+slumplista = []
+
+for k in range(0, 5):  # Här tar jag fram 5 slumpmässiga siffor
+    random_num = random.randint(1, 10)
+    slumplista.append(random_num)  # här förs dom in i listan.
+
+def storstaTal(lista):
+    max = lista[0]
+    for x in lista:#här går jag igenom listan,
+        if x > max:
+            max = x # Om x är större är max så kommer x bli lika med max.
+    return max
+
+biggest = storstaTal(slumplista)
+
+print("Största talet är: ",biggest)
