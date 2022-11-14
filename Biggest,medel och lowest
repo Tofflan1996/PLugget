@@ -12,20 +12,39 @@ def storstaTal(lista):
     max = lista[0] #Förusätter att den första i listan är störst. 
     for x in lista:
         if x > max: #Nu går jag igenom om någon annan del av listan är större än [0] 
-            max = x #
+            max = x # Är något större komemr det komma fram. 
     return max
 
 def minstaTal(lista):
     min = lista[0] #Förusätter att den första är minst
     for x in lista:
-        if x > min:# Samma princip ovanför, mer eller mindre omväd. 
-            x = min
+        if x < min :# Samma princip ovanför, mer eller mindre omvänd. 
+            min = x
     return min
+
     
-
-
+def medelVarde(lista): 
+    min = lista[0]
+    y = 0
+    for x in lista:
+        y = y + x 
+    
+    medel = y/5
+    return medel
+    
+    
+medel = medelVarde(slumplista)   
+print("Slumplistan blev: \n",slumplista)
+print("Medelvärdet blev: ", medel)
+    
+    
+#Kallar till dom olika funktionerna. 
 biggest = storstaTal(slumplista)
 smallest = minstaTal(slumplista)
+
+#Skriver ut sedan resultatet. 
+print("Slumplistan blev: \n",slumplista)
+
 print("Största talet är: ",biggest)
 print("Minsta talet är: ",smallest)
 
