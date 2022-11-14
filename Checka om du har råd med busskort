@@ -1,0 +1,32 @@
+# 100 kr för vuxna
+# 50 kr för barn
+# 0 kr för barn > 7 år
+import math
+import time
+
+print("-----Kontroll om du har råd att köpa en bussbiljett-----")
+
+while True: #Valde en while loop för att enkelt kunna breaka när användaren kan betala.a 
+
+    cash = float(input("Hur mycket pengar har du?: "))  # för att se hur mycket pengar användaren har
+    age = float(input("När är du född?: "))
+
+    user_age = round(2022 - age)
+
+    if user_age > 18: #om dom är vuxna
+        print(f'Du är ', user_age, " år gammal.")
+        if cash >= 100:
+            print("Grattis du har råd")
+            break
+        else:
+            print("Du har tyvärr inte råd en biljett kostar 100:-")
+    elif user_age >= 7: # om dom är barn 
+        if cash >= 50:
+            print("Grattis du har råd")
+            break
+        else:
+            print("Du har tyvärr inte råd en biljett kostar 50:-")
+    else: # Om dom är småbarn
+        print("Spara pengarna, du åker gratis")
+        break
+
