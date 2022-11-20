@@ -1,0 +1,13 @@
+ import csv
+
+
+plats_list = []
+    
+with open("platsdata.csv","r") as file:
+    csv_reader = csv.reader(file, delimiter = ';') 
+    for x in csv_reader:
+        plats_list.append(x)
+        
+
+            
+print(plats_list)
